@@ -1,0 +1,2 @@
+#!/bin/bash
+find /var/log -type f -name "*.log" -exec wc -l {} + | awk '{sum += $1} END {print "Всего строк:", sum}'

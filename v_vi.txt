@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Проверяем, передан ли аргумент (путь к файлу)
+if [[ $# -ne 1 ]]; then
+    echo "Использование: $0 путь_к_файлу"
+    exit 1
+fi
+
+logfile="$1"
+
+# Проверяем, существует ли указанный файл
+if [[ ! -f "$logfile" ]]; then
+    echo "Ошибка: файл $logfile не найден!"
+    exit 2
+fi
+
+# Фильтруем строки с WARN и ERROR, записываем в 1.log
+grep "WARN" "$logfile" > 1.log
+grep "ERROR" "$logfile" >> 1.log
+
+echo "Файл 1.log создан!"

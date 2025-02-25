@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ "$PWD" == "$HOME" ]]; then
+	echo "Запуск был из домашнего каталога $HOME"
+	exit 0
+else
+	echo "Запуск НЕ из домашнего каталога"
+	exit 1
+fi

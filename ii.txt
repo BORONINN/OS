@@ -1,0 +1,9 @@
+#!/bin/bash
+str=""
+while true; do
+	read str
+	[[ "$str" == "q" ]] && break
+	result="$result $str"
+done
+
+echo "результат: $result"

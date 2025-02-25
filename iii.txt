@@ -4,7 +4,7 @@ while true; do
     echo "Выберите действие:"
     echo "1) Открыть nano"
     echo "2) Открыть vi"
-    echo "3) Открыть браузер links"
+    echo "3) Открыть links"
     echo "4) Выйти"
 
     read choice
